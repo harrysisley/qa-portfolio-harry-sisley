@@ -1,0 +1,35 @@
+﻿ID,Area,Test Scenario,Preconditions,Steps,Expected Result,Priority,Status,Actual Result / Notes
+TC-001,Navigation,Logo returns user to homepage,User is on an internal page,1. Click the site logo,Homepage loads successfully,Medium,Not Run,
+TC-002,Navigation,Desktop navigation links open correct pages,Desktop viewport,1. Click each top navigation item,Each link opens the correct page,High,Not Run,
+TC-003,Navigation,Mobile menu opens and closes,Mobile viewport,"1. Tap menu icon
+2. Tap close icon",Menu opens and closes without layout issues,High,Not Run,
+TC-004,Search,Valid product search returns relevant results,Products exist for search term,"1. Enter a valid product name
+2. Submit search",Relevant matching products are displayed,High,Not Run,
+TC-005,Search,No-result search shows useful message,None,1. Search for a non-existent product,Clear no-results message is displayed,Medium,Not Run,
+TC-006,Search,Search trims leading and trailing spaces,Products exist for search term,1. Search for a valid term with spaces before/after it,Same results as the clean search term are shown,Low,Not Run,
+TC-007,Product,Product detail page loads correctly,Product exists,1. Open a product from results,"Title, price, image and controls display correctly",High,Not Run,
+TC-008,Product,User can add product to basket,Product is in stock,"1. Open product
+2. Click Add to Basket",Product is added and basket count updates,Critical,Not Run,
+TC-009,Basket,Basket total updates when quantity changes,Basket contains one £20 product,1. Change quantity from 1 to 2,Total updates from £20 to £40 without refresh,Critical,Not Run,
+TC-010,Basket,User can remove product from basket,Basket contains a product,1. Click Remove,Product is removed and total recalculates,High,Not Run,
+TC-011,Registration,User can register with valid data,Email is not already registered,"1. Open registration
+2. Enter valid details
+3. Submit",Account is created and success state is shown,Critical,Not Run,
+TC-012,Registration,Duplicate email is rejected,Email already exists,1. Register using an existing email,Registration is blocked with clear message,High,Not Run,
+TC-013,Login,Valid user can log in,Active account exists,"1. Enter valid email/password
+2. Submit",User is authenticated and redirected appropriately,Critical,Not Run,
+TC-014,Login,Invalid password shows error,Active account exists,"1. Enter valid email and incorrect password
+2. Submit","Login is rejected with clear, non-sensitive error",High,Not Run,
+TC-015,Checkout,Required fields are validated,Basket contains item,"1. Open checkout
+2. Submit empty form",Required fields display clear validation messages,Critical,Not Run,
+TC-016,Checkout,Invalid email format is rejected,Basket contains item,"1. Enter invalid email
+2. Submit checkout form",Email field shows validation error,High,Not Run,
+TC-017,Checkout,Valid address can be submitted,Basket contains item,"1. Enter valid customer/address details
+2. Continue",User progresses to next checkout stage,Critical,Not Run,
+TC-018,Responsive,Checkout form fits mobile viewport,Mobile viewport,"1. Open checkout
+2. Scroll through all fields","No overlap, clipping or horizontal scrolling occurs",High,Not Run,
+TC-019,Responsive,Buttons remain tappable on mobile,Mobile viewport,1. Review primary controls across customer journey,"Buttons are visible, readable and easy to tap",Medium,Not Run,
+TC-020,Regression,Core purchase journey remains functional after release,Latest build is deployed,"1. Search product
+2. Add to basket
+3. Update basket
+4. Proceed to checkout",Core journey completes without regression,Critical,Not Run,
