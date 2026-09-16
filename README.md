@@ -44,6 +44,5 @@ For a real application, I would duplicate the templates, replace the fictional D
 
 ## Contact
 
-Canvey Island, Essex, SS8 0LA  
-harrysisley@hotmail.co.uk  
-07522899427
+Essex, United Kingdom
+harrysisley@hotmail.co.uk
